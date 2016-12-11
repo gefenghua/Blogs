@@ -21,48 +21,48 @@ JavaScript是世界上最流行的脚本语言，是一种运行在浏览器中�
 根据JavaScript的规则，变量的声明会被提升，但是变量的初始化并不会被提升。函数外声明的变量，会被提升到文档顶部。函数内声明的变量，会被提升到函数顶部。
 
 	function f() {
-    	var x = 1 + y;
-    	alert(x);
-    	var y = 2;
+        var x = 1 + y;
+        alert(x);
+        var y = 2;
 	}
-	alert(x);
+    alert(x);
 
 如果变量在函数内没有声明，该变量会被提升为全局变量。
 
 	function f() {
-    	x = 1;
-	}
-	alert(x);
+        x = 1;
+    }
+    alert(x);
 
 ### 3、变量的作用域
 如果变量在函数内声明，则该变量的作用域为整个函数体，在函数外不可访问，属于局部变量。
 
 	function f() {
-    	var x = 1;
-	}
-	alert(x);
+        var x = 1;
+    }
+    alert(x);
 
 函数可以嵌套，内部函数可以访问外部函数定义的变量，反之则不可。
 
 	function outer() {
-	    var x = 1;
-	    function inner() {
-	        var y = x + 1;
-			alert(y);
-	    }
-    	var z = y + 1;
-		alert(z);
+        var x = 1;
+        function inner() {
+            var y = x + 1;
+            alert(y);
+        }
+        var z = y + 1;
+        alert(z);
 	}
 
 如果内部函数与外部函数定义了相同的变量，根据就近原则，内部函数的变量会覆盖外部函数的变量。
 
 	function outer() {
-	    var x = 1;
-	    function inner() {
-	        var x = 2;
-	        alert(x);
-	    }
-	}
+        var x = 1;
+        function inner() {
+            var x = 2;
+            alert(x);
+        }
+    }
 
 ---
 
@@ -73,7 +73,7 @@ JavaScript是世界上最流行的脚本语言，是一种运行在浏览器中�
 #### 1.1 函数声明
 
 	function function_name(parameters) {
-    	......
+        ......
 	}
 
 函数声明后不会马上执行，只有被调用的时候才会执行。
@@ -81,9 +81,9 @@ JavaScript是世界上最流行的脚本语言，是一种运行在浏览器中�
 #### 1.2 函数表达式
 
 	var f = function (parameters) {
-	    ......    
-	};
-	f(parameters);
+        ......    
+    };
+    f(parameters);
 
 将函数存储在变量中，之后可以通过变量名来调用，而不需要函数名称。
 
@@ -105,42 +105,42 @@ JavaScript是世界上最流行的脚本语言，是一种运行在浏览器中�
 函数表达式，如果后面紧跟()，则会自动自我调用。声明的函数不能自我调用。
 
 	(function () {
-		alert("Hello");
-	})();
+        alert("Hello");
+    })();
 
 #### 3.2 作为函数被调用
 当函数没有被其他对象调用时，函数默认是window全局对象的函数。此时this的值是window全局对象。
 
 	function f() {
-		alert("Hello");
-		return this;
-	}
-	f();
+        alert("Hello");
+        return this;
+    }
+    f();
 
 #### 3.3 作为方法被调用
 可以将函数定义为对象的方法，该对象是函数的所有者。当使用对象调用方法时，此时的this值指向调用函数的对象。
 
 	var obj = {
-	    x : 1,
-	    y : 2,
-	    f : function () { return this.x + this.y;}
-	}
-	obj.f();
+        x : 1,
+        y : 2,
+        f : function () { return this.x + this.y;}
+    }
+    obj.f();
 
 #### 3.4 作为构造函数被调用
 如果使用new关键字，实际是创建了一个新的对象。新对象会继承构造函数的属性和方法。此时this值指向新创建的对象。为了区分普通函数和构造函数，约定构造函数的首字母为大写。
 
 	function F(x, y) {
-	    this.x = x;
-	    this.y = y;
-	}
-	var obj = new F(1, 2);
+        this.x = x;
+        this.y = y;
+    }
+    var obj = new F(1, 2);
 
 #### 3.5 call和apply
 函数是一个对象，可以调用call或apply方法。此时this值指向方法传递的对象。
 
 	function f(x, y) {
-	    return x+y;
+        return x+y;
 	}
 	arr = [1, 2];
 	f.call(obj, 1, 2);
@@ -317,11 +317,11 @@ JavaScript语言是单线程的，一次只能完成一个任务。好处是实�
 两个异步执行的函数：
 
 	function f1(callback){
-		setTimeout(function () {
-			// f1的任务代码
-			callback();
-		}, 1000);
-	}
+        setTimeout(function () {
+            // f1的任务代码
+            callback();
+        }, 1000);
+    }
 
 	f1(f2);
 
@@ -337,11 +337,11 @@ JavaScript语言是单线程的，一次只能完成一个任务。好处是实�
 执行完成后，立即触发done事件，从而开始执行f2：
 
 	function f1(){
-		setTimeout(function () {
-			// f1的任务代码
-			f1.trigger('done');
-		}, 1000);
-	}
+        setTimeout(function () {
+            // f1的任务代码
+            f1.trigger('done');
+        }, 1000);
+    }
 
 事件监听的优点是容易理解，可以绑定多个事件，每个事件可以指定多个回调函数，低耦合。缺点是流程不够清晰。
 
@@ -355,11 +355,11 @@ JavaScript语言是单线程的，一次只能完成一个任务。好处是实�
 发布信号：
 
 	function f1(){
-		setTimeout(function () {
-			// f1的任务代码
-			jQuery.publish("done");
-		}, 1000);
-	}
+        setTimeout(function () {
+            // f1的任务代码
+            jQuery.publish("done");
+        }, 1000);
+    }
 
 取消订阅：
 
@@ -373,13 +373,13 @@ JavaScript语言是单线程的，一次只能完成一个任务。好处是实�
 每一个异步任务返回一个Promises对象：
 
 	function f1(){
-		var dfd = $.Deferred();
-		setTimeout(function () {
-			// f1的任务代码
-			dfd.resolve();
-		}, 500);
-		return dfd.promise;
-	}
+        var dfd = $.Deferred();
+        setTimeout(function () {
+            // f1的任务代码
+            dfd.resolve();
+        }, 500);
+        return dfd.promise;
+    }
 
 该对象有一个then方法，可以指定回调函数：
 
