@@ -100,7 +100,7 @@ XMLHttpRequest对象是Ajax技术的核心，在IE 5中首次引入，是一种�
 要上传的文件是表单元素，所以可以将它放到FormData对象中，实现文件上传：
 
 	for (var i=0; i<files.length; i++) {
-		formData.append('files[]', files[i]);
+        formData.append('files[]', files[i]);
 	}
 
 ### 4、获取二进制数据
@@ -123,9 +123,9 @@ XMLHttpRequest对象是Ajax技术的核心，在IE 5中首次引入，是一种�
 在回调函数中，处理事件：
 
 	function updateProgress(event) {
-		if (event.lengthComputable) {
-			var percentComplete = event.loaded / event.total;
-		}
+        if (event.lengthComputable) {
+            var percentComplete = event.loaded / event.total;
+        }
 	}
 
 与progress事件相关的其他事件：
