@@ -4,6 +4,8 @@ title:  "Markdown快速入门"
 categories: jekyll update
 ---
 
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/markdown_icon.jpg)
+
 ## 一、概述
 Markdown是一种**轻量级**的标记语言，与之对应的是**重量级**的HTML。
 
