@@ -1,13 +1,10 @@
 ---
 layout: post
-title:  "在Github Pages上使用Jekyll搭建免费的个人博客"
+title:  "使用Jekyll搭建免费的Github Pages个人博客"
 categories: jekyll update
 ---
 
-[TOC]
-
 ## 一、Git
-
 ### 1、Git概述
 Git是一个开源的分布式版本控制系统。
 
@@ -25,7 +22,6 @@ Git是一个开源的分布式版本控制系统。
 	$ git config --global user.email EMAIL_ADDRESS
 
 ## 二、Github
-
 ### 1、Github概述
 Github是一个免费的远程仓库，用来进行代码托管。同时，还是一个开源协作社区。
 
@@ -42,11 +38,32 @@ Github是一个免费的远程仓库，用来进行代码托管。同时，还�
 
 ### 3、创建远程仓库
 + 在Github主页，点击【New repository】
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/01_new_repository.jpg)
+
 + 输入仓库名称Blogs，点击【Create repository】
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/02_create_new_repository.jpg)
+
 + 进入新建的仓库，选择【Settings】
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/03_repository_settings.jpg)
+
 + 在【GitHub Pages】组中，点击【Launch automatic page generator】
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/04_automatic_page_generator.jpg)
+
 + 编辑标题和描述，选择主题，点击【Publish page】
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/05_new_project_site.jpg)
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/06_publish_page.jpg)
+
 + 生成博客主页http://username.github.io/Blogs
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/07_create_project_page.jpg)
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/08_project_page.jpg)
 
 ## 三、Github Pages
 ### 1、Github Pages概述
@@ -68,11 +85,11 @@ Jekyll是一个静态站点生成工具，不需要数据库的支持，通过ma
 
 [RubyInstaller](http://rubyinstaller.org/downloads/)
 
-#### 2.1 安装Ruby
+* 安装Ruby
 
 很简单的Windows安装程序，不再赘述。
 
-#### 2.2 安装RubyDevKit
+* 安装RubyDevKit
 
 Ruby开发包是一个压缩文件，解压并进入解压缩的目录，执行命令：
 
@@ -84,7 +101,7 @@ Ruby开发包是一个压缩文件，解压并进入解压缩的目录，执行�
 
 	$ ruby dk.rb install
 
-#### 2.3 安装并启动Jekyll
+* 安装并启动Jekyll
 
 在安装之前，由于众所周知的原因，需要修改一下安装源。
 
@@ -114,8 +131,12 @@ Ruby开发包是一个压缩文件，解压并进入解压缩的目录，执行�
 
 Jekyll服务的默认端口是4000。服务成功启动后，访问http://localhost:4000就可以看到默认的站点主页。
 
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/09_local_site.jpg)
+
 ### 3、工作目录
 在新建的Blogs目录下有如下的主要文件和文件夹：
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/10_work_area.jpg)
 
 + _posts文件夹，文章默认的存放位置
 + _site文件夹，默认的转化结果存放位置
@@ -150,21 +171,27 @@ Jekyll服务的默认端口是4000。服务成功启动后，访问http://localh
 
 	$ git rm <filename>
 
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/11_sync_repository.jpg)
+
 ### 5、编辑文章
 
 在工作目录下的_posts文件夹中，创建并编辑文章，文件名必须是YYYY-MM-DD-title格式。
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/12_create_blog.jpg)
 
 文章可以包含如下的头信息：
 
 	---
 	layout: post
-	title:  "Welcome to Jekyll!"
+	title:  "使用Jekyll搭建免费的Github Pages个人博客"
 	categories: jekyll update
 	---
 
 其中，layout表示使用_layouts目录下的post布局文件。title表示文章的标题。categories是文章生成的html文件存放的目录，多级目录用空格分隔。
 
 文章编辑完成并保存之后，刷新站点主页查看编辑之后的效果。
+
+**TODO**![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/13_add_blog.jpg)
 
 ### 6、上传本地文件
 
@@ -182,5 +209,8 @@ Jekyll服务的默认端口是4000。服务成功启动后，访问http://localh
 
 	$ git push origin gh-pages
 
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/14_update_repository.jpg)
+
 这样，再次访问博客主页http://username.github.io/Blogs，就会看到新生成的内容了。
 
+**TODO**![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/15_update_page.jpg)
