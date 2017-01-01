@@ -191,7 +191,7 @@ Jekyll服务的默认端口是4000。服务成功启动后，访问http://localh
 
 文章编辑完成并保存之后，刷新站点主页查看编辑之后的效果。
 
-**TODO**![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/13_add_blog.jpg)
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/13_add_blog.jpg)
 
 ### 6、上传本地文件
 
@@ -213,4 +213,4 @@ Jekyll服务的默认端口是4000。服务成功启动后，访问http://localh
 
 这样，再次访问博客主页http://username.github.io/Blogs，就会看到新生成的内容了。
 
-**TODO**![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/15_update_page.jpg)
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/15_update_page.jpg)
