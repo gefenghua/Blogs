@@ -6,8 +6,12 @@ categories: jekyll update
 
 ## 一、Git
 
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/git_icon.jpg)
+
 ### 1、Git概述
-Git是一个开源的分布式版本控制系统。
+> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+Git是一个开源的分布式版本控制系统，可以快速、高效地处理不同规模的项目。
 
 [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
@@ -23,8 +27,11 @@ Git是一个开源的分布式版本控制系统。
 	$ git config --global user.email EMAIL_ADDRESS
 
 ## 二、Github
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/github_icon.jpg)
+
 ### 1、Github概述
-Github是一个免费的远程仓库，用来进行代码托管。同时，还是一个开源协作社区。
+Github是一个免费的远程仓库，用来进行代码托管。同时，还是一个开源协作社区。因为只支持Git作为唯一的版本库格式进行托管，所以称为GitHub。
 
 [Github官网主页](https://github.com/)
 
@@ -67,6 +74,7 @@ Github是一个免费的远程仓库，用来进行代码托管。同时，还�
 ![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-01-01-create-blog-with-jekyll/08_project_page.jpg)
 
 ## 三、Github Pages
+
 ### 1、Github Pages概述
 Github Pages提供了一个免费的网页，用来介绍托管在Github上的项目。
 
@@ -76,6 +84,9 @@ Github Pages提供了一个免费的网页，用来介绍托管在Github上的�
 由于Github Pages提供免费（300M）、稳定的空间，所以很适合用来创建个人博客。虽然可以使用html来编辑博客，但是显然这样做的工作量比较大，并且博客越复杂就越难维护。庆幸的是，可以通过模板引擎快速创建静态博客。鉴于Github Pages官网推荐了Jekyll模板引擎，下面就介绍如何使用Jekyll来创建博客。
 
 ## 四、Jekyll模板引擎
+
+![](https://github.com/gefenghua/MarkdownPictures/raw/master/jekyll_icon.jpg)
+
 ### 1、Jekyll概述
 Jekyll是一个静态站点生成工具，不需要数据库的支持，通过markdown编写静态文件，生成html页面，并且可以先在本地查看效果，满意之后再提交到Github上，最终在博客主页上看到结果。
 
