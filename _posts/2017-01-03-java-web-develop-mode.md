@@ -93,4 +93,5 @@ categories: jekyll update
 
 参考文章：
 
-[Web 研发模式演变 -- 作者：lifesinger](https://github.com/lifesinger/blog/issues/184)
+lifesinger：[Web 研发模式演变](https://github.com/lifesinger/blog/issues/184)
+
