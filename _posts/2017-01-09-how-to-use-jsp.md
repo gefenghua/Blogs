@@ -230,3 +230,69 @@ web应用程序启动时，web服务器会创建Filter的实例对象并调用�
 	public void destroy()
 
 servlet容器在销毁过滤器实例前调用该方法，释放过滤器占用的资源。
+
+## 七、跳转
+按照跳转的处理方式分成两类：客户端跳转和服务器跳转。
+
+### 1、客户端跳转
+使用超链接：
+
+	<a href="newPage.jsp">跳转</a>
+
+使用JavaScript脚本：
+
+	<script>
+	    function onSubmit() {
+	        submit();
+	    }
+	</script>
+	<form name="form1" method="post" action="onSubmit();">
+	    <input type="submit">
+	</form>
+
+提交表单：
+
+	<form name="form1" method="post" action="newPage.jsp">
+	    <input type="text" name="username">
+	    <input type="text" name="password">
+	    <input type="submit">
+	</form>
+
+使用jsp的内置对象response：
+
+	<%
+	    response.sendRedirect("http://www.google.cn");
+	%>
+
+或者
+
+	<%
+	    response.sendHeader("Refresh","1;url=http://www.google.cn");
+	%>
+
+### 2、服务器跳转
+使用RequestDispatcher类的forward方法。
+
+	RequestDispatcher rd = request.getRequestDispatcher("/newPage.jsp");
+	rd.forward(request, response);
+
+### 3、sendRedirect和forward的区别
+sendRedirect：
+
+* 执行完所有代码再跳转到目标页面
+* 跳转后浏览器的url会改变
+* 在浏览器中重定向
+* 可以跳转到其他服务器
+
+forward：
+
+* 直接跳转到目标页面，不执行后续代码
+* 跳转后url不会改变
+* 在服务器端重定向
+* 不能跳转到其他服务器
+
+---
+
+参考文章：
+
+[JSP常用跳转方式](http://blog.csdn.net/wanghuan203/article/details/8836326)
