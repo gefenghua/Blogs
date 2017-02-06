@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "使用Webpack构建Vue2应用"
+title:  "Vue快速入门"
 categories: jekyll update
 ---
 
