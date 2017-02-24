@@ -12,35 +12,20 @@ categories: jekyll update
 ### 2、安装webpack
 安装好Node.js之后，通过npm安装Webpack打包工具。首先创建一个工程目录（如：vue-demo），然后进入到工程目录。
 
-初始化目录，并创建一个package.json文件：
+初始化目录，并生成一个package.json文件：
 
 	npm init
 
 安装webpack依赖：
 
-	npm install webpack --save-dev
+	npm i webpack --save-dev
 
 ### 3、安装vue-cli
 vue-cli是vue的脚手架工具，用来构建工程。可以采用全局安装的方式进行安装。
 
-	npm install vue-cli -g --save-dev
+	npm i vue-cli -g
 
-### 4、安装工程依赖
-安装常用的依赖，vue-loader是vue的加载器，vue-router负责路由，vue-resource负责网络请求，vuex负责数据状态管理。
-
-	npm install vue-loader vue-router vue-resource vuex --save-dev
-
-安装之后，还需要在main.js文件中导入才能使用：
-
-    import VueResource from 'vue-resource'
-    import VueRouter from 'vue-router'
-    import Vuex from 'vuex'
-
-    Vue.use(VueResource)
-    Vue.use(VueRouter)
-    Vue.use(Vuex)
-
-### 5、创建工程
+### 4、创建工程
 使用脚手架创建一个工程：
 
 	vue init webpack
@@ -49,7 +34,7 @@ vue-cli是vue的脚手架工具，用来构建工程。可以采用全局安装�
 
 根据提示，继续安装依赖：
 
-	npm install
+	npm i
 
 安装完毕，启动服务：
 
@@ -61,7 +46,7 @@ vue-cli是vue的脚手架工具，用来构建工程。可以采用全局安装�
 
 ![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-02-15-vue-dev-setup/02-npm-run.png)
 
-### 6、目录结构
+### 5、目录结构
 创建工程生成的目录结构如下：
 
 ![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-02-15-vue-dev-setup/03-project-structure.png)
@@ -113,4 +98,3 @@ vue-cli是vue的脚手架工具，用来构建工程。可以采用全局安装�
 **配置文件package.json**
 
 ![](https://github.com/gefenghua/MarkdownPictures/raw/master/2017-02-15-vue-dev-setup/10-package-json.png)
-
